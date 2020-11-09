@@ -1,0 +1,76 @@
+:root {
+    --color-primary: #164d88;
+    --color-secondary: #047aed;
+    --color-accent: #ff9340;
+    --color-hover: #ff8527;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+// GLOBAL CLASSES
+
+.app {
+    width: 100%;
+}
+
+.container {
+    width: 100vw;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    @media (max-width: 1100px) {
+        padding: 0 1rem;
+    }
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: var(--row-justify, center);
+    align-items: center;
+}
+
+.flex_column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: var(--column-align, center);
+
+    @supports (gap: var(--flex-gap, 0.7em)) {
+        gap: var(--flex-gap, 0.7em);
+    }
+}
+
+.side_padding {
+    padding: 0;
+
+    @media (max-width: 740px) {
+        padding: 8%;
+    }
+}

@@ -1,0 +1,20 @@
+.navbar {
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 1em 0;
+  color: #fff;
+}
+
+.navbar h3 {
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.navbar a:hover, .navbar a:focus {
+  border-bottom: 2px solid #fff;
+}
+/*# sourceMappingURL=Navbar.module.css.map */

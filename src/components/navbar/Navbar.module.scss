@@ -1,0 +1,20 @@
+.navbar {
+    width: 100%;
+    background: var(--color-secondary);
+    padding: 1em 0;
+    color: #fff;
+
+    h3 {
+        font-weight: 600;
+    }
+
+    a {
+        font-size: 0.9rem;
+        padding: 0 10px;
+
+        &:hover, &:focus {
+            border-bottom: 2px solid #fff;
+        }
+    }
+
+}
