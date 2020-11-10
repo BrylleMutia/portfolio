@@ -1,0 +1,5 @@
+.btn:hover, .btn:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+/*# sourceMappingURL=Button.module.css.map */

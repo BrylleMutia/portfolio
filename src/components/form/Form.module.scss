@@ -1,0 +1,21 @@
+.request_form {
+    color: #333;
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .form_control {
+        margin: 1em 0;
+
+        input, textarea {
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid var(--color-border);
+            background: transparent;
+            padding: 0.4em;
+            font-family: sans-serif;
+            color: #333;
+        }
+    }
+}

@@ -3,6 +3,7 @@
     --color-secondary: #047aed;
     --color-accent: #ff9340;
     --color-hover: #ff8527;
+    --color-border: #b4becb;
 }
 
 body {
@@ -15,6 +16,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 img {
@@ -42,6 +44,7 @@ a {
     max-width: 1100px;
     margin: 0 auto;
     overflow-x: hidden;
+    height: 100%;
 
     @media (max-width: 1100px) {
         padding: 0 1rem;
@@ -72,5 +75,31 @@ a {
 
     @media (max-width: 740px) {
         padding: 8%;
+    }
+}
+
+.header {
+    background: var(--color-secondary);
+    // height: 400px;
+    position: relative;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        height: 100px;
+        bottom: -70px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        transform: skewY(-3deg);
+    }
+
+    div {
+        overflow: visible;
+
+        @media (max-width: 750px) {
+            flex-direction: column;
+            padding-top: 2em;
+        }
     }
 }

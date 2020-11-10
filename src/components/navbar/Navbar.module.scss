@@ -1,8 +1,12 @@
 .navbar {
     width: 100%;
     background: var(--color-secondary);
-    padding: 1em 0;
     color: #fff;
+    height: 60px;
+
+    div {
+        padding: 1em;
+    }
 
     h3 {
         font-weight: 600;
@@ -10,7 +14,7 @@
 
     a {
         font-size: 0.9rem;
-        padding: 0 10px;
+        padding: 10px;
 
         &:hover, &:focus {
             border-bottom: 2px solid #fff;

@@ -3,6 +3,7 @@
   --color-secondary: #047aed;
   --color-accent: #ff9340;
   --color-hover: #ff8527;
+  --color-border: #b4becb;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 img {
@@ -41,6 +43,7 @@ a {
   max-width: 1100px;
   margin: 0 auto;
   overflow-x: hidden;
+  height: 100%;
 }
 
 @media (max-width: 1100px) {
@@ -95,6 +98,37 @@ a {
 @media (max-width: 740px) {
   .side_padding {
     padding: 8%;
+  }
+}
+
+.header {
+  background: var(--color-secondary);
+  position: relative;
+}
+
+.header::before, .header::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: #fff;
+  -webkit-transform: skewY(-3deg);
+          transform: skewY(-3deg);
+}
+
+.header div {
+  overflow: visible;
+}
+
+@media (max-width: 750px) {
+  .header div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 2em;
   }
 }
 /*# sourceMappingURL=App.module.css.map */
