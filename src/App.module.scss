@@ -1,13 +1,13 @@
 :root {
-    --color-primary: #164d88;
+    --color-primary: #1c3fa8;
     --color-secondary: #047aed;
-    --color-accent: #ff9340;
-    --color-hover: #ff8527;
+    --color-dark: #002240;
+    --color-text: #333;
     --color-border: #b4becb;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: roboto, sans-serif;
 }
 
 *,
@@ -33,6 +33,8 @@ a {
     color: #eee;
 }
 
+
+
 // GLOBAL CLASSES
 
 .app {
@@ -56,6 +58,7 @@ a {
     flex-direction: row;
     justify-content: var(--row-justify, center);
     align-items: center;
+    flex-wrap: var(--row-wrap, wrap);
 }
 
 .flex_column {
@@ -70,6 +73,15 @@ a {
     }
 }
 
+.grid_row {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 .side_padding {
     padding: 0;
 
@@ -77,6 +89,9 @@ a {
         padding: 8%;
     }
 }
+
+
+// APP CLASSES
 
 .header {
     background: var(--color-secondary);
@@ -94,12 +109,16 @@ a {
         transform: skewY(-3deg);
     }
 
-    div {
-        overflow: visible;
 
-        @media (max-width: 750px) {
-            flex-direction: column;
-            padding-top: 2em;
+
+    &__grid {
+        overflow: visible;
+        padding: 0 2%;
+        grid-template-columns: 55% 35%;
+        gap: 10%;
+
+        @media (max-width: 800px) {
+
         }
     }
 }

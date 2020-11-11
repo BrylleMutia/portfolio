@@ -1,13 +1,13 @@
 :root {
-  --color-primary: #164d88;
+  --color-primary: #1c3fa8;
   --color-secondary: #047aed;
-  --color-accent: #ff9340;
-  --color-hover: #ff8527;
+  --color-dark: #002240;
+  --color-text: #333;
   --color-border: #b4becb;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: roboto, sans-serif;
 }
 
 *,
@@ -66,6 +66,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: var(--row-wrap, wrap);
+      flex-wrap: var(--row-wrap, wrap);
 }
 
 .flex_column {
@@ -89,6 +91,21 @@ a {
   .flex_column {
     gap: var(--flex-gap, 0.7em);
   }
+}
+
+.grid_row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .side_padding {
@@ -118,17 +135,11 @@ a {
           transform: skewY(-3deg);
 }
 
-.header div {
+.header__grid {
   overflow: visible;
-}
-
-@media (max-width: 750px) {
-  .header div {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 2em;
-  }
+  padding: 0 2%;
+  -ms-grid-columns: 55% 35%;
+      grid-template-columns: 55% 35%;
+  gap: 10%;
 }
 /*# sourceMappingURL=App.module.css.map */

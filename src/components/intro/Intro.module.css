@@ -1,12 +1,9 @@
 .intro {
   color: #fff;
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
   padding-left: 3em;
 }
 
 .intro h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5em;
 }
 /*# sourceMappingURL=Intro.module.css.map */

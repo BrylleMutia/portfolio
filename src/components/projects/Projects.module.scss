@@ -1,0 +1,11 @@
+.works {
+    margin-top: 5em;
+    color: #fff;
+    text-align: center;
+
+    &__header {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: var(--color-text);
+    }
+}
