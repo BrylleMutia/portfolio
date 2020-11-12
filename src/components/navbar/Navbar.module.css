@@ -5,7 +5,7 @@
   height: 60px;
 }
 
-.navbar div {
+.navbar__links {
   padding: 1em;
 }
 
@@ -20,5 +20,25 @@
 
 .navbar a:hover, .navbar a:focus {
   border-bottom: 2px solid #fff;
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    height: 110px;
+  }
+  .navbar ul {
+    margin-top: 0.5em;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .navbar h3 {
+    display: none;
+  }
+  .navbar__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=Navbar.module.css.map */
