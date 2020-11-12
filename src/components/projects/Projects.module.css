@@ -9,4 +9,14 @@
   font-size: 1.4rem;
   color: var(--color-text);
 }
+
+.card__wrapper {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: horizontal;
+  overflow: auto;
+  max-width: 100%;
+  height: calc(100vw - 16px);
+}
 /*# sourceMappingURL=Projects.module.css.map */

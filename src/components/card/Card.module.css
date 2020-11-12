@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=Card.module.css.map */
+@media (max-width: 800px) {
+  .header__card {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 20em;
+  }
+}
+/*# sourceMappingURL=Card.module.css.map */

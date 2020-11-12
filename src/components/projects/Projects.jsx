@@ -47,10 +47,10 @@ const Projects = () => {
             <h3 className={works__header}>My Past Projects</h3>
             <div className={cx(container, flex_row)}>
                 {projects.map((project, index) => (
-                        <Card key={index} image={project.image} style={{ width: "30em", height: "16rem" }}>
-                            <h3>{project.title}</h3>
-                            <p>{project.description}</p>
-                        </Card>
+                    <Card key={index} image={project.image} element="project" style={{ width: "30em", height: "16rem" }}>
+                        <h3>{project.title}</h3>
+                        <p>{project.description}</p>
+                    </Card>
                 ))}
             </div>
         </section>

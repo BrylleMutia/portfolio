@@ -37,7 +37,7 @@ function App() {
                 <div className={header}>
                     <div className={cx(container, grid_row, header__grid)} style={{ "--row-justify": "space-between" }}>
                         <Intro />
-                        <Card style={formCardStyle}>
+                        <Card element="header" style={formCardStyle}>
                             <Form />
                         </Card>
                     </div>
