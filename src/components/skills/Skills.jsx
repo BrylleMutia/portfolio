@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { skills, skills__wrapper } from "./Skills.module.css";
 import { container, flex_row, flex_column } from "../../App.module.css";
 
+import { FaCss3, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import { MdExplicit } from "react-icons/md";
+import { DiMongodb, DiSass, DiGit } from "react-icons/di";
+import { SiMaterialUi } from "react-icons/si";
+
 import Card from "../card/Card";
 
 import cx from "classnames";
@@ -9,34 +14,44 @@ import cx from "classnames";
 const Skills = () => {
     const [stack, setStack] = useState([
         {
-            name: "HTML5"
+            name: "HTML5",
+            icon: <FaHtml5 />
         },
         {
-            name: "CSS3"
+            name: "CSS3",
+            icon: <FaCss3 />
         },
         {
-            name: "JavaScript"
+            name: "JavaScript",
+            icon: <FaJs />
         },
         {
-            name: "React"
+            name: "React",
+            icon: <FaReact />
         },
         {
-            name: "Node.js"
+            name: "Node.js",
+            icon: <FaNodeJs />
         },
         {
-            name: "Express"
+            name: "Express",
+            icon: <MdExplicit />
         },
         {
-            name: "MongoDB"
+            name: "MongoDB",
+            icon: <DiMongodb />
         },
         {
-            name: "SASS"
+            name: "SASS",
+            icon: <DiSass />
         },
         {
-            name: "Git"
+            name: "Git",
+            icon: <DiGit />
         },
         {
-            name: "Material UI"
+            name: "Material UI",
+            icon: <SiMaterialUi />
         },
     ]);
 
@@ -48,8 +63,9 @@ const Skills = () => {
             <div className={flex_row}>
                 {stack.map((tech, index) => (
                     <div className={skills__wrapper}>
-                        <Card key={index} style={{ boxShadow: "0 3px 5px rgba(0, 0, 0, 0.2)" }}>
+                        <Card key={index} style={{ boxShadow: "0 3px 5px rgba(0, 0, 0, 0.2)", textAlign: "center" }}>
                             <h4>{tech.name}</h4>
+                            <div>{tech.icon}</div>
                         </Card>
                     </div>
                 ))}
