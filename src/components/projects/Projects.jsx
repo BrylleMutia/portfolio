@@ -17,7 +17,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
 
 const Projects = () => {
-    const [projects, setProjects] = useState([
+    const [projects] = useState([
         {
             title: "Todo Today!",
             description: "A classic to-do list web application with multiple user support and authentication through Node.js, Express and MongoDB.",

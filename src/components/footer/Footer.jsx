@@ -9,7 +9,7 @@ import { SiGmail } from "react-icons/si";
 import cx from "classnames";
 
 const Footer = () => {
-    const [contacts, setContacts] = useState([
+    const [contacts] = useState([
         {
             platform: "Facebook",
             link: "https://www.facebook.com/brylle03",

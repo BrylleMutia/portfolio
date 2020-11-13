@@ -12,7 +12,7 @@ import { Card } from "../styled/Styled";
 import cx from "classnames";
 
 const Skills = () => {
-    const [stack, setStack] = useState([
+    const [stack] = useState([
         {
             name: "HTML5",
             icon: <FaHtml5 />
