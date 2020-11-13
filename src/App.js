@@ -9,20 +9,36 @@ import Form from "./components/form/Form";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
-import Card from "./components/card/Card";
+
+import styled from "styled-components";
+import { Card } from "./components/styled/Styled";
 
 import { IconContext } from "react-icons";
 
 function App() {
-    const formCardStyle = {
-        backgroundColor: "#fff",
-        position: "relative",
-        top: "100px",
-        zIndex: 100,
-        flexBasis: "30%",
-        padding: "1.5em",
-        marginRight: "3em",
-    };
+    const HeaderCard = styled(Card)`
+        background-color: #fff;
+        position: relative;
+        top: 80px;
+        z-index: 10;
+        flex-basis: 30%;
+        height: 330px;
+        width: 280px;
+
+        @media (max-width: 800px) {
+            margin: 0 7em;
+            top: 0;
+            justify-self: center;
+        }
+
+        @media (max-width: 600px) {
+            margin: 0 4em;
+        }
+
+        @media (max-width: 450px) {
+            margin: 0 2em;
+        }
+    `;
 
     // global styling config for react-icons
     const iconGlobalStyles = {
@@ -37,9 +53,9 @@ function App() {
                 <div className={header}>
                     <div className={cx(container, grid_row, header__grid)} style={{ "--row-justify": "space-between" }}>
                         <Intro />
-                        <Card element="header" style={formCardStyle}>
+                        <HeaderCard>
                             <Form />
-                        </Card>
+                        </HeaderCard>
                     </div>
                 </div>
                 <Skills />

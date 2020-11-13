@@ -3,6 +3,10 @@
 
     h3 {
         font-size: 1rem;
+
+        @media (max-width: 600px) {
+            font-size: calc(1vw + 0.65rem);
+        }
     }
 
     .form_control {
@@ -22,5 +26,10 @@
                 border-bottom: 1px solid var(--color-secondary);
             }
         }
+    }
+
+    .hidden {
+        visibility: hidden;
+        height: 0;
     }
 }

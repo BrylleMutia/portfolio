@@ -138,16 +138,35 @@ a {
 
 .header__grid {
   overflow: visible;
-  padding: 0 2%;
   -ms-grid-columns: 55% 35%;
       grid-template-columns: 55% 35%;
   gap: 10%;
+  padding: 0 3em;
 }
 
 @media (max-width: 800px) {
   .header__grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    padding: 0 3em;
+    padding-top: 5em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__grid {
+    padding: 0 2em;
+    padding-top: 5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .header__grid {
+    padding: 0 2em;
+    padding-top: 2em;
   }
 }
 /*# sourceMappingURL=App.module.css.map */

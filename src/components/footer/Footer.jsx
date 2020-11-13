@@ -39,7 +39,7 @@ const Footer = () => {
 
     return (
         <IconContext.Provider value={iconStyles}>
-            <footer>
+            <footer id="contact">
                 <div className={footer}>
                     <div className={cx(container, flex_row)} style={{ "--row-justify": "space-around" }}>
                         <div className={footer__title}>

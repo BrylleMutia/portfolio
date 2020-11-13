@@ -5,9 +5,9 @@ import { container, flex_row, flex_column } from "../../App.module.css";
 import { FaCss3, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { MdExplicit } from "react-icons/md";
 import { DiMongodb, DiSass, DiGit } from "react-icons/di";
-import { SiMaterialUi } from "react-icons/si";
+import { SiMaterialUi, SiRedux } from "react-icons/si";
 
-import Card from "../card/Card";
+import { Card } from "../styled/Styled";
 
 import cx from "classnames";
 
@@ -28,6 +28,10 @@ const Skills = () => {
         {
             name: "React",
             icon: <FaReact />
+        },
+        {
+            name: "Redux",
+            icon: <SiRedux />
         },
         {
             name: "Node.js",
@@ -56,7 +60,7 @@ const Skills = () => {
     ]);
 
     return (
-        <section className={cx(container, flex_column, skills)}>
+        <section className={cx(container, flex_column, skills)} id="skills">
             <h3>
                 My Current Skills
             </h3>

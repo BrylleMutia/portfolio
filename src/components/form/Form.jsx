@@ -1,14 +1,20 @@
 import React from 'react';
-import { request_form, form_control } from "./Form.module.css";
+import { request_form, form_control, hidden } from "./Form.module.css";
 
-import Button from "../button/Button";
+import { Button } from "../styled/Styled";
 
 
 const Form = () => {
     return (
             <div className={request_form}>
                 <h3>Got an idea? Let's build that!</h3>
-                <form>
+                {/* ADD NETLIFY FORMS SUPPORT / VISIT DOCS FOR REF */}
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    {/* NETLIFY FORMS ANTI-SPAM */}
+                    <p className={hidden}>
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
                     <div className={form_control}>
                         <input type="text" name="name" placeholder="Name" required />
                     </div>

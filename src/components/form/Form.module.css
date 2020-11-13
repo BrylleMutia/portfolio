@@ -6,6 +6,12 @@
   font-size: 1rem;
 }
 
+@media (max-width: 600px) {
+  .request_form h3 {
+    font-size: calc(1vw + 0.65rem);
+  }
+}
+
 .request_form .form_control {
   margin: 1em 0;
 }
@@ -24,5 +30,10 @@
 .request_form .form_control input:focus,
 .request_form .form_control textarea:focus {
   border-bottom: 1px solid var(--color-secondary);
+}
+
+.request_form .hidden {
+  visibility: hidden;
+  height: 0;
 }
 /*# sourceMappingURL=Form.module.css.map */
