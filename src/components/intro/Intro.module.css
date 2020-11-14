@@ -14,4 +14,10 @@
     font-size: calc(1vw + 0.65rem);
   }
 }
+
+@supports not (gap: 10%) {
+  .intro {
+    margin-bottom: 2em;
+  }
+}
 /*# sourceMappingURL=Intro.module.css.map */

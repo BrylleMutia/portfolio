@@ -9,9 +9,14 @@
         h3 {
             font-size: calc(1vw + 0.8rem);
         }
-        
+
         p {
             font-size: calc(1vw + 0.65rem);
         }
+    }
+
+    // in case gap property is not supported (mostly mobile)
+    @supports not (gap: 10%) {
+        margin-bottom: 2em;
     }
 }

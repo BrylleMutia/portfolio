@@ -110,8 +110,9 @@ a {
     &__grid {
         overflow: visible;
         grid-template-columns: 55% 35%;
-        gap: 10%;
         padding: 0 3em;
+        gap: 10%;
+
 
         @media (max-width: 800px) {
             grid-template-columns: 1fr;

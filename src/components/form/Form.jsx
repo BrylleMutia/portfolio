@@ -9,8 +9,8 @@ const Form = () => {
             <div className={request_form}>
                 <h3>Got an idea? Let's build that!</h3>
                 {/* ADD NETLIFY FORMS SUPPORT / VISIT DOCS FOR REF */}
-                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-                    <input type="hidden" name="form-name" value="contact" />
+                <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" netlify>
+                    <input type="hidden" name="form-name" value="contact"/>
                     {/* NETLIFY FORMS ANTI-SPAM */}
                     <p className={hidden}>
                         <label>Don't fill this out if you're human: <input name="bot-field" /></label>

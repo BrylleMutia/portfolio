@@ -11,12 +11,19 @@
 }
 
 .works__links {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  width: 4.3em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 4.3em;
 }
 
 .works__title h3 {
@@ -25,5 +32,6 @@
   padding: 0.3em 2em;
   border-radius: 30px;
   margin-bottom: 1em;
+  margin-top: -1em;
 }
 /*# sourceMappingURL=Projects.module.css.map */

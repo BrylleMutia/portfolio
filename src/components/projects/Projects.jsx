@@ -6,6 +6,7 @@ import ProjectOne from "../images/portfolio/Untitled-1.png";
 import ProjectTwo from "../images/portfolio/Untitled-2.png";
 import ProjectThree from "../images/portfolio/Untitled-3.png";
 import ProjectFour from "../images/portfolio/Untitled-4.png";
+import ProjectFive from "../images/portfolio/Untitled-5.png";
 
 import cx from "classnames";
 
@@ -26,23 +27,30 @@ const Projects = () => {
             source: "http://bit.ly/todotoday-github"
         },
         {
+            title: "Codebits Blog",
+            description: "A fullstack web application for sharing programming and design guides, made primarily with MERN stack.",
+            image: ProjectTwo,
+            link: "http://bit.ly/codebits-blog",
+            source: "http://bit.ly/codebits-github"
+        },
+        {
             title: "Quizard!",
             description: "Quiz web application made with React and TypeScript, utilizing the Trivia API.",
-            image: ProjectTwo,
+            image: ProjectThree,
             link: "http://bit.ly/quizard-api",
             source: "http://bit.ly/quizard-github"
         },
         {
             title: "Foodemy",
             description: "A responsive modern landing page made by using CSS layouts and the latest CSS features.",
-            image: ProjectThree,
+            image: ProjectFour,
             link: "http://bit.ly/foodemy",
             source: "http://bit.ly/foodemy-github"
         },
         {
             title: "Portfolio v1.0",
             description: "My first portfolio made by taking advantage of CSS animations and client-side routing.",
-            image: ProjectFour,
+            image: ProjectFive,
             link: "http://bit.ly/brylle-portfolio",
             source: "http://bit.ly/portfoliov1-github"
         },
