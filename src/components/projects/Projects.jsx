@@ -28,7 +28,7 @@ const Projects = () => {
         },
         {
             title: "Codebits Blog",
-            description: "A fullstack web application for sharing programming and design guides, made primarily with MERN stack.",
+            description: "A fullstack web application for sharing programming and design guides, with dashboard functionalities.",
             image: ProjectTwo,
             link: "http://bit.ly/codebits-blog",
             source: "http://bit.ly/codebits-github"
