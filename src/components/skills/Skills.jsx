@@ -66,7 +66,7 @@ const Skills = () => {
             </h3>
             <div className={flex_row}>
                 {stack.map((tech, index) => (
-                    <div className={skills__wrapper}>
+                    <div key={index} className={skills__wrapper}>
                         <Card key={index} style={{ boxShadow: "0 3px 5px rgba(0, 0, 0, 0.2)", textAlign: "center" }}>
                             <h4>{tech.name}</h4>
                             <div>{tech.icon}</div>
