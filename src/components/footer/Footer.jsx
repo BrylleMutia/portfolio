@@ -43,8 +43,8 @@ const Footer = () => {
                 <div className={footer}>
                     <div className={cx(container, flex_row)} style={{ "--row-justify": "space-around" }}>
                         <div className={footer__title}>
-                            <h3>Brylle Mutia <span>/ Web Developer</span></h3>
-                            <p>Need a hand? Contact me.</p>
+                            <h3>Brylle Mutia <span> / Web Developer</span></h3>
+                            <p>Need a hand? Let's talk about it.</p>
                         </div>
                         <ul className={cx(flex_row, footer__links)}>
                             {contacts.map((contact, index) => (

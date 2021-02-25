@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: roboto, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 *,
@@ -122,18 +122,6 @@ a {
 .header {
   background: var(--color-secondary);
   position: relative;
-}
-
-.header::before, .header::after {
-  content: "";
-  position: absolute;
-  height: 100px;
-  bottom: -70px;
-  right: 0;
-  left: 0;
-  background: #fff;
-  -webkit-transform: skewY(-3deg);
-          transform: skewY(-3deg);
 }
 
 .header__grid {

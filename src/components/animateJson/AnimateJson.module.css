@@ -1,0 +1,13 @@
+.animation__container {
+  margin: 0 auto;
+  width: 540px;
+  background-color: transparent;
+}
+
+@media (max-width: 576px) {
+  .animation__container {
+    width: 100%;
+    margin-top: 3em;
+  }
+}
+/*# sourceMappingURL=AnimateJson.module.css.map */

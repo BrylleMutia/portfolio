@@ -9,10 +9,6 @@
   padding: 1em;
 }
 
-.navbar h3 {
-  font-weight: 500;
-}
-
 .navbar a {
   font-size: 0.9rem;
   padding: 10px;
@@ -22,14 +18,15 @@
   border-bottom: 2px solid #fff;
 }
 
-@media (max-width: 400px) {
+.navbar ul {
+  margin-top: 0.5em;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 800px) {
   .navbar {
     height: 110px;
-  }
-  .navbar ul {
-    margin-top: 0.5em;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
   }
   .navbar h3 {
     display: none;
