@@ -107,8 +107,8 @@ const Projects = () => {
                 {projects.map((project, index) => (
                     <ProjectsCard key={index} image={project.image}>
                         <div className={cx(flex_row, works__links)}>
-                            <a href={project.source}><AiFillGithub /></a>
-                            <a href={project.link}><BiLinkExternal /></a>
+                            <a target="_blank" href={project.source}><AiFillGithub /></a>
+                            <a target="_blank" href={project.link}><BiLinkExternal /></a>
                         </div>
                         <div className={works__title}>
                             <h3>{project.title}</h3>
