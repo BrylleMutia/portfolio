@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <nav className={navbar}>
             <div className={cx(container, flex_row, navbar__links)} style={{ "--row-justify": "space-between", "--row-wrap": "nowrap" }}>
-                <h3>Brylle Mutia.</h3>
+                <h3>BM.</h3>
                 <ul className={flex_row}>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
