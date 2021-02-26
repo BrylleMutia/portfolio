@@ -4,6 +4,7 @@
 
 .request_form h3 {
   font-size: 1rem;
+  font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 600px) {
