@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { skills, skills__wrapper } from "./Skills.module.css";
 import { container, flex_row, flex_column } from "../../App.module.css";
 
-import { FaCss3, FaHtml5, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { MdExplicit } from "react-icons/md";
-import { DiMongodb, DiSass, DiGit } from "react-icons/di";
+import { FaCss3, FaHtml5, FaJs, FaReact, FaLaravel, FaVuejs, FaPhp } from "react-icons/fa";
+import { DiSass, DiGit } from "react-icons/di";
 import { SiMaterialUi, SiRedux } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 
 import { Card } from "../styled/Styled";
 
@@ -14,11 +14,11 @@ import cx from "classnames";
 const Skills = () => {
     const [stack] = useState([
         {
-            name: "HTML5",
+            name: "HTML",
             icon: <FaHtml5 />
         },
         {
-            name: "CSS3",
+            name: "CSS",
             icon: <FaCss3 />
         },
         {
@@ -34,16 +34,20 @@ const Skills = () => {
             icon: <SiRedux />
         },
         {
-            name: "Node.js",
-            icon: <FaNodeJs />
+            name: "Vue",
+            icon: <FaVuejs />
         },
         {
-            name: "Express",
-            icon: <MdExplicit />
+            name: "PHP",
+            icon: <FaPhp />
         },
         {
-            name: "MongoDB",
-            icon: <DiMongodb />
+            name: "SQL",
+            icon: <GrMysql />
+        },
+        {
+            name: "Laravel",
+            icon: <FaLaravel />
         },
         {
             name: "SASS",
