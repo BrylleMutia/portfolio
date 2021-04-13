@@ -1,140 +1,153 @@
 :root {
-    --color-primary: #1c3fa8;
-    --color-secondary: #047aed;
-    --color-dark: #002240;
-    --color-text: #333;
-    --color-border: #b4becb;
+  --color-primary: #1c3fa8;
+  --color-secondary: #047aed;
+  --color-dark: #002240;
+  --color-text: #333;
+  --color-border: #b4becb;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h3 {
-    font-family: 'Alegreya SC', serif;
+  font-family: "Alegreya SC", serif;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
-    color: #eee;
+  text-decoration: none;
+  color: #eee;
 }
 
 // GLOBAL CLASSES
 
 .app {
-    width: 100%;
-    overflow-y: hidden;
+  width: 100%;
+  overflow-y: hidden;
 }
 
 .container {
-    width: 100vw;
-    max-width: 1100px;
-    margin: 0 auto;
-    overflow-x: hidden;
-    height: 100%;
+  width: 100vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  height: 100%;
 
-    @media (max-width: 1100px) {
-        padding: 0 1rem;
-    }
+  @media (max-width: 1100px) {
+    padding: 0 1rem;
+  }
 }
 
 .flex_row {
-    display: flex;
-    flex-direction: row;
-    justify-content: var(--row-justify, center);
-    align-items: center;
-    flex-wrap: var(--row-wrap, wrap);
+  display: flex;
+  flex-direction: row;
+  justify-content: var(--row-justify, center);
+  align-items: center;
+  flex-wrap: var(--row-wrap, wrap);
 }
 
 .flex_column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: var(--column-align, center);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: var(--column-align, center);
 
-    @supports (gap: var(--flex-gap, 0.7em)) {
-        gap: var(--flex-gap, 0.7em);
-    }
+  @supports (gap: var(--flex-gap, 0.7em)) {
+    gap: var(--flex-gap, 0.7em);
+  }
 }
 
 .grid_row {
-    display: grid;
-    grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .side_padding {
-    padding: 0;
+  padding: 0;
 
-    @media (max-width: 740px) {
-        padding: 8%;
-    }
+  @media (max-width: 740px) {
+    padding: 8%;
+  }
 }
 
 // APP CLASSES
 
 .header {
-    background: var(--color-secondary);
-    position: relative;
+  background: var(--color-secondary);
+  position: relative;
 
-    // &::before,
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     height: 100px;
-    //     bottom: -70px;
-    //     right: 0;
-    //     left: 0;
-    //     background: #fff;
-    //     transform: skewY(-3deg);
-    // }
+  &__grid {
+    overflow: visible;
+    grid-template-columns: 55% 35%;
+    padding: 0 3em;
+    gap: 10%;
 
-    &__grid {
-        overflow: visible;
-        grid-template-columns: 55% 35%;
-        padding: 0 3em;
-        gap: 10%;
-
-
-        @media (max-width: 800px) {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            padding: 0 3em;
-            padding-top: 5em;
-            text-align: center;
-        }
-        
-        @media (max-width: 600px) {
-            padding: 0 2em;
-            padding-top: 5em;
-        }
-
-        @media (max-width: 400px) {
-            padding: 0 2em;
-            padding-top: 2em;
-        }
-        
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      padding: 0 3em;
+      padding-top: 5em;
+      text-align: center;
     }
+
+    @media (max-width: 600px) {
+      padding: 0 2em;
+      padding-top: 5em;
+    }
+
+    @media (max-width: 400px) {
+      padding: 0 2em;
+      padding-top: 2em;
+    }
+  }
+
+  &__animate {
+    animation: formEntry 2s ease-in;
+  }
+}
+
+@keyframes formEntry {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.1) rotate(30deg);
+    transform: scale(0.1) rotate(30deg);
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  70% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

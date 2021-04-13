@@ -26,4 +26,23 @@
             margin-top: -1em;
         }
     }
+
+    &__animate {
+        animation: projectEntry 2s ease-in forwards;
+    }
 }
+
+
+@keyframes projectEntry {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+  
