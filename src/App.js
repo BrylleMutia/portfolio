@@ -18,40 +18,38 @@ import { Card } from "./components/styled/Styled";
 
 import { IconContext } from "react-icons";
 
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+
+const HeaderCard = styled(Card)`
+  background-color: #fff;
+  position: relative;
+  top: 80px;
+  z-index: 10;
+  flex-basis: 30%;
+  height: 330px;
+  width: 280px;
+
+  @media (max-width: 800px) {
+    margin: 0 7em;
+    top: 0;
+    justify-self: center;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0 4em;
+  }
+
+  @media (max-width: 450px) {
+    margin: 0 2em;
+  }
+`;
+
+// global styling config for react-icons
+const iconGlobalStyles = {
+  color: "#047aed",
+  size: "5em",
+};
 
 function App() {
-  const HeaderCard = styled(Card)`
-    background-color: #fff;
-    position: relative;
-    top: 80px;
-    z-index: 10;
-    flex-basis: 30%;
-    height: 330px;
-    width: 280px;
-
-    @media (max-width: 800px) {
-      margin: 0 7em;
-      top: 0;
-      justify-self: center;
-    }
-
-    @media (max-width: 600px) {
-      margin: 0 4em;
-    }
-
-    @media (max-width: 450px) {
-      margin: 0 2em;
-    }
-  `;
-
-  // global styling config for react-icons
-  const iconGlobalStyles = {
-    color: "#047aed",
-    size: "5em",
-  };
-
   return (
     <IconContext.Provider value={iconGlobalStyles}>
       <div className={app}>
@@ -68,7 +66,7 @@ function App() {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
           <path
             fill="#047aed"
-            fill-opacity="1"
+            fillOpacity="1"
             d="M0,128L48,117.3C96,107,192,85,288,69.3C384,53,480,43,576,58.7C672,75,768,117,864,144C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
         </svg>
 

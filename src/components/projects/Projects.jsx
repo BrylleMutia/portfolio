@@ -1,22 +1,25 @@
-import React, { useState, useRef, useEffect } from "react";
-import { works, works__header, works__links, works__title, works__animate } from "./Projects.module.css";
+import React, { useState } from "react";
+import { works, works__header, works__container } from "./Projects.module.css";
 import { container, flex_row, flex_column } from "../../App.module.css";
 
-import ProjectOne from "../images/portfolio/Untitled-1.png";
-import ProjectTwo from "../images/portfolio/Untitled-2.png";
-import ProjectThree from "../images/portfolio/Untitled-3.png";
-import ProjectFour from "../images/portfolio/Untitled-4.png";
-import ProjectFive from "../images/portfolio/Untitled-5.png";
-import ProjectSix from "../images/portfolio/Untitled-6.jpg";
+import Project from "./project/Project";
+
+import ProjectOne from "./images/Untitled-1.png";
+import ProjectTwo from "./images/Untitled-2.png";
+import ProjectThree from "./images/Untitled-3.png";
+import ProjectFour from "./images/Untitled-4.png";
+import ProjectFive from "./images/Untitled-5.png";
+import ProjectSix from "./images/Untitled-6.jpg";
 
 import cx from "classnames";
 
-import styled from "styled-components";
-import { Card } from "../styled/Styled";
-
 import { IconContext } from "react-icons";
-import { AiFillGithub } from "react-icons/ai";
-import { BiLinkExternal } from "react-icons/bi";
+
+// overwrite global icon styles
+const iconStyles = {
+  color: "#fff",
+  size: "2em",
+};
 
 const Projects = () => {
   const [projects] = useState([
@@ -64,103 +67,13 @@ const Projects = () => {
     },
   ]);
 
-  const animationRef = useRef(null);
-  const [isVisible, setIsVisible] = useState({
-    0: false,
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-    5: false,
-  });
-
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    treshold: 1.0,
-  };
-
-  useEffect(() => {
-    // apply animation class when element is on viewport
-    const observer = new IntersectionObserver((entries) => {
-      if (entries)
-        entries.forEach((entry, index) => {
-          console.log(entry);
-          setIsVisible((prev) => (prev[index] = entry.isIntersecting));
-        });
-    }, options);
-
-    if (animationRef.current) observer.observe(animationRef.current);
-
-    return () => {
-      if (animationRef.current) observer.unobserve(animationRef.current);
-    };
-  }, []);
-
-  // for background-image overlay
-  const getImageForCard = (img) => `
-        background: url(${img}), radial-gradient(rgb(175, 175, 175), rgb(138, 138, 138));
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        & > div:last-of-type {
-            display: none;
-        }
-
-        &:hover {
-            background-blend-mode: multiply;
-
-            & > div:last-of-type {
-                display: block;
-            }
-        }
-        
-        @media (max-width: 800px) {
-            background-blend-mode: multiply;
-
-            & > div:last-of-type {
-                display: block;
-            }
-        }
-    `;
-
-  const ProjectsCard = styled(Card)`
-    width: 30em;
-    height: 16em;
-    display: flex;
-    flex-direction: column;
-    ${(props) => props.image && getImageForCard(props.image)}
-  `;
-
-  // overwrite global icon styles
-  const iconStyles = {
-    color: "#fff",
-    size: "2rem",
-  };
-
   return (
     <IconContext.Provider value={iconStyles}>
       <section className={cx(works, flex_column)} id="projects">
         <h3 className={works__header}>My Past Projects</h3>
-        <div className={cx(container, flex_row)}>
+        <div className={cx(container, flex_row, works__container)}>
           {projects.map((project, index) => (
-            <div ref={animationRef} className={isVisible && works__animate}>
-              <ProjectsCard key={index} image={project.image}>
-                <div className={cx(flex_row, works__links)}>
-                  <a target="_blank" href={project.source}>
-                    <AiFillGithub />
-                  </a>
-                  <a target="_blank" href={project.link}>
-                    <BiLinkExternal />
-                  </a>
-                </div>
-                <div className={works__title}>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                </div>
-              </ProjectsCard>
-            </div>
+            <Project key={index} projectDetails={project} />
           ))}
         </div>
       </section>
