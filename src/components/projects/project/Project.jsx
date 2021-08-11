@@ -53,7 +53,7 @@ export default function Project({ projectDetails }) {
 
   const options = {
     root: null,
-    rootMargin: "200px",
+    rootMargin: "0px",
     treshold: 1.0,
   };
 
