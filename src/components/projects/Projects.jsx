@@ -9,9 +9,9 @@ import ProjectTwo from "./images/Project-2.png";
 import ProjectThree from "./images/Project-3.png";
 import ProjectFour from "./images/Project-4.png";
 import ProjectFive from "./images/Project-5.png";
-import ProjectSix from "./images/Project-6.jpg";
-import ProjectSeven from "./images/Project-7.jpg";
-import ProjectEight from "./images/Project-8.jpg";
+import ProjectSix from "./images/Project-6.png";
+import ProjectSeven from "./images/Project-7.png";
+import ProjectEight from "./images/Project-8.png";
 
 import cx from "classnames";
 
