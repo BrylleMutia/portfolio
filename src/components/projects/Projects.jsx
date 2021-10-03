@@ -68,18 +68,18 @@ const Projects = () => {
       source: "https://github.com/BrylleMutia/linear-fence",
     },
     {
-      title: "Quizard!",
-      description: "Quiz web application made with React and TypeScript, utilizing the Trivia API.",
-      image: ProjectSeven,
-      link: "http://bit.ly/quizard-api",
-      source: "https://github.com/BrylleMutia/quizard",
-    },
-    {
       title: "Portfolio v1.0",
+      image: ProjectSeven,
       description: "My first portfolio made by taking advantage of CSS animations and client-side routing.",
-      image: ProjectEight,
       link: "http://bit.ly/brylle-portfolio",
       source: "https://github.com/BrylleMutia/portfolio-webapp",
+    },
+    {
+      title: "Quizard!",
+      description: "Quiz web application made with React and TypeScript, utilizing the Trivia API.",
+      image: ProjectEight,
+      link: "http://bit.ly/quizard-api",
+      source: "https://github.com/BrylleMutia/quizard",
     },
   ]);
 
