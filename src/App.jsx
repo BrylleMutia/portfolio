@@ -16,6 +16,17 @@ import { Card } from "./components/styled/Styled";
 
 import { IconContext } from "react-icons";
 
+import { initializeApp } from "firebase/app";
+import {
+   getFirestore,
+   orderBy,
+   collection,
+   query,
+   limit,
+} from "firebase/firestore";
+
+import { useCollectionData } from "react-firebase-hooks/firestore";
+
 
 const HeaderCard = styled(Card)`
   background-color: #fff;
@@ -47,7 +58,29 @@ const iconGlobalStyles = {
   size: "5em",
 };
 
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseApp = initializeApp({
+  apiKey: "AIzaSyBhXCY4P3-JieQcNJdjdVewHi-iCYeeWQY",
+  authDomain: "portfolio-abd3b.firebaseapp.com",
+  projectId: "portfolio-abd3b",
+  storageBucket: "portfolio-abd3b.appspot.com",
+  messagingSenderId: "332173456749",
+  appId: "1:332173456749:web:fe9dfd2b83d66894589664",
+  measurementId: "G-F0B8TYP3RN"
+});
+
+const db = getFirestore(firebaseApp);
+
 function App() {
+  // get projects list from firebase
+  const projectsRef = collection(db, "projects");
+  const projectsQuery = query(projectsRef, orderBy("dateAdded", "asc"));
+  const [projects, isProjectsLoading] =
+     useCollectionData(projectsQuery);
+  console.log(projects, isProjectsLoading);
+
   return (
     <IconContext.Provider value={iconGlobalStyles}>
       <div className="app">
@@ -71,7 +104,7 @@ function App() {
         <AnimateJson animate={animation_1} />
 
         <Skills />
-        <Projects />
+        <Projects projects={isProjectsLoading ? [] : projects} />
         <Footer />
       </div>
     </IconContext.Provider>

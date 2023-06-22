@@ -21,8 +21,8 @@ const iconStyles = {
   size: "2em",
 };
 
-const Projects = () => {
-  const [projects] = useState([
+const Projects = ({ projects }) => {
+  const [fdf] = useState([
     {
       title: "Electro E-commerce",
       description: "An E-commerce platform dedicated for buying and selling Electronic devices. Made with React/Laravel.",
