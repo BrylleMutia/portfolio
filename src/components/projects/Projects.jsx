@@ -1,17 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Projects.css";
 
 import Project from "./project/Project";
-
-import ProjectOne from "./images/Project-1.png";
-import ProjectTwo from "./images/Project-2.png";
-import ProjectThree from "./images/Project-3.png";
-import ProjectFour from "./images/Project-4.png";
-import ProjectFive from "./images/Project-5.png";
-import ProjectSix from "./images/Project-6.png";
-import ProjectSeven from "./images/Project-7.png";
-import ProjectEight from "./images/Project-8.png";
-
 
 import { IconContext } from "react-icons";
 
@@ -22,65 +12,6 @@ const iconStyles = {
 };
 
 const Projects = ({ projects }) => {
-  const [fdf] = useState([
-    {
-      title: "Electro E-commerce",
-      description: "An E-commerce platform dedicated for buying and selling Electronic devices. Made with React/Laravel.",
-      image: ProjectOne,
-      link: "https://bit.ly/electro-v1",
-      source: "https://github.com/BrylleMutia/electro-frontend",
-    },
-    {
-      title: "Codebits Blog",
-      description: "A fullstack web application for sharing programming and design guides, with dashboard functionalities.",
-      image: ProjectTwo,
-      link: "http://bit.ly/codebits-blog",
-      source: "https://github.com/BrylleMutia/codebits-blog",
-    },
-    {
-      title: "Coviz",
-      description: "COVID-19 statistics tracker and visualization tool made with Vue and Quasar.",
-      image: ProjectThree,
-      link: "http://bit.ly/coviz-19",
-      source: "https://github.com/BrylleMutia/covid-stats-visualizer",
-    },
-    {
-      title: "Todo Today!",
-      description: "A classic to-do list web application with multiple user support and authentication through Node.js, Express and MongoDB.",
-      image: ProjectFour,
-      link: "http://bit.ly/todotoday-mern",
-      source: "https://github.com/BrylleMutia/todo-today",
-    },
-    {
-      title: "Foodemy",
-      description: "A responsive modern landing page made by using CSS layouts and the latest CSS features.",
-      image: ProjectFive,
-      link: "http://bit.ly/foodemy",
-      source: "https://github.com/BrylleMutia/restaurant-landing-page",
-    },
-    {
-      title: "Linear Fence",
-      description: "A website dedicated to selling top-quality fences, from vinyl, ornamental, and chain-link fences.",
-      image: ProjectSix,
-      link: "https://bit.ly/linear-fence",
-      source: "https://github.com/BrylleMutia/linear-fence",
-    },
-    {
-      title: "Portfolio v1.0",
-      image: ProjectSeven,
-      description: "My first portfolio made by taking advantage of CSS animations and client-side routing.",
-      link: "http://bit.ly/brylle-portfolio",
-      source: "https://github.com/BrylleMutia/portfolio-webapp",
-    },
-    {
-      title: "Quizard!",
-      description: "Quiz web application made with React and TypeScript, utilizing the Trivia API.",
-      image: ProjectEight,
-      link: "http://bit.ly/quizard-api",
-      source: "https://github.com/BrylleMutia/quizard",
-    },
-  ]);
-
   return (
     <IconContext.Provider value={iconStyles}>
       <section className="works flex_column" id="projects">
