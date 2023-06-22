@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACG,AAAD,qBAAY,CAAC;EACX,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,KAAK;EACZ,gBAAgB,EAAE,WAAW;CAM9B;;AAJC,MAAM,EAAE,SAAS,EAAE,KAAK;EALzB,AAAD,qBAAY,CAAC;IAMT,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,GAAG;GAElB",
-    "sources": [
-        "AnimateJson.module.scss"
-    ],
-    "names": [],
-    "file": "AnimateJson.module.css"
-}

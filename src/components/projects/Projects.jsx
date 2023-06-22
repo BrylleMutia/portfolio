@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { works, works__header, works__container } from "./Projects.module.css";
-import { container, flex_row, flex_column } from "../../App.module.css";
+import "./Projects.css";
 
 import Project from "./project/Project";
 
@@ -13,7 +12,6 @@ import ProjectSix from "./images/Project-6.png";
 import ProjectSeven from "./images/Project-7.png";
 import ProjectEight from "./images/Project-8.png";
 
-import cx from "classnames";
 
 import { IconContext } from "react-icons";
 
@@ -85,9 +83,9 @@ const Projects = () => {
 
   return (
     <IconContext.Provider value={iconStyles}>
-      <section className={cx(works, flex_column)} id="projects">
-        <h3 className={works__header}>My Past Projects</h3>
-        <div className={cx(container, flex_row, works__container)}>
+      <section className="works flex_column" id="projects">
+        <h3 className="works__header">My Past Projects</h3>
+        <div className="container flex_row works__container">
           {projects.map((project, index) => (
             <Project key={index} projectDetails={project} />
           ))}

@@ -1,7 +1,5 @@
 import React from "react";
-import { container, app, grid_row, header, header__grid, header__animate } from "./App.module.css";
-
-import cx from "classnames";
+import "./App.css";
 
 import Navbar from "./components/navbar/Navbar";
 import AnimateJson from "./components/animateJson/AnimateJson";
@@ -52,12 +50,12 @@ const iconGlobalStyles = {
 function App() {
   return (
     <IconContext.Provider value={iconGlobalStyles}>
-      <div className={app}>
+      <div className="app">
         <Navbar />
-        <div className={header}>
-          <div className={cx(container, grid_row, header__grid)} style={{ "--row-justify": "space-between" }}>
+        <div className="header">
+          <div className="container grid_row header__grid" style={{ "--row-justify": "space-between" }}>
             <Intro />
-            <HeaderCard className={header__animate}>
+            <HeaderCard className="header__animate">
               <Form />
             </HeaderCard>
           </div>

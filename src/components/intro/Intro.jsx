@@ -1,9 +1,9 @@
 import React from "react";
-import { intro } from "./Intro.module.css";
+import "./Intro.css";
 
 const Intro = () => {
     return (
-            <div className={intro}>
+            <div className="intro">
                 <h3>Hi, I'm Brylle. Nice to meet you!</h3>
                 <br />
                 <p>

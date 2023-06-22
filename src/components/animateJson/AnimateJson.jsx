@@ -1,7 +1,7 @@
 import React from "react";
 import ReactBodymovin from "react-bodymovin";
 
-import { animation, animation__container } from "./AnimateJson.module.css";
+import "./AnimateJson.css";
 
 const Animation = ({ animate }) => {
   const bodymovinOptions = {
@@ -12,8 +12,8 @@ const Animation = ({ animate }) => {
   };
 
   return (
-    <div className={animation}>
-      <div className={animation__container}>
+    <div>
+      <div className="animation__container">
         <ReactBodymovin options={bodymovinOptions} />
       </div>
     </div>
