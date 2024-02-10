@@ -1,22 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Footer.css";
 
 import { IconContext } from "react-icons";
-import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
-   const [contacts] = useState([
-      {
-         platform: "Facebook",
-         link: "https://www.facebook.com/brylle03",
-         icon: <FaFacebook />,
-      },
-      {
-         platform: "Twitter",
-         link: "https://www.twitter.com/bryllemutia3",
-         icon: <FaTwitter />,
-      },
+   const contacts = [
       {
          platform: "Gmail",
          link: "mailto:bryllemutia3@gmail.com",
@@ -27,7 +17,7 @@ const Footer = () => {
          link: "https://www.linkedin.com/in/isidro-brylle-mutia-526a66163",
          icon: <FaLinkedin />,
       },
-   ]);
+   ];
 
    // overwrite global icon styles
    const iconStyles = {
@@ -51,7 +41,9 @@ const Footer = () => {
                   <ul className="flex_row footer__links">
                      {contacts.map((contact, index) => (
                         <li key={index}>
-                           <a href={contact.link}>{contact.icon}</a>
+                           <a href={contact.link} target="_blank">
+                              {contact.icon}
+                           </a>
                         </li>
                      ))}
                   </ul>
