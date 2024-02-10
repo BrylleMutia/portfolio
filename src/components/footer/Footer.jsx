@@ -38,7 +38,7 @@ const Footer = () => {
                      </h3>
                      <p>Got an idea? Let's talk about it.</p>
                   </div>
-                  <ul className="flex_row footer__links">
+                  <ul className="flex_row footer__links text-white">
                      {contacts.map((contact, index) => (
                         <li key={index}>
                            <a href={contact.link} target="_blank">

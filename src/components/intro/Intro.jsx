@@ -1,19 +1,25 @@
 import React from "react";
-import "./Intro.css";
 
 const Intro = () => {
-    return (
-            <div className="intro">
-                <h3>Hi, I'm Brylle. Nice to meet you!</h3>
-                <br />
-                <p>
-                    I'm a Web Developer. I create things for the web, from a simple "Hello World" project to basically anything you can
-                    think of.
-                </p>
-                <br />
-                <p>All we need is your idea!</p>
-            </div>
-    );
+   return (
+      <section className="text-white flex flex-col items-center">
+         <div>
+            <h3 className="flex flex-col justify-center items-center md:flex-row md:items-baseline md:justify-start">
+               <span className="font-bold text-[2em] md:mr-1">
+                  Brylle Mutia{" "}
+               </span>
+               <span>/ Web Developer</span>
+            </h3>
+            <br />
+            <p className="max-w-[50ch]">
+               I create things for the web, from a simple "Hello World" project
+               to basically anything you can think of.
+            </p>
+            <br />
+            <p>All we need is your idea! (+ coffee!)</p>
+         </div>
+      </section>
+   );
 };
 
 export default Intro;

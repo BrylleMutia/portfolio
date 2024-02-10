@@ -8,7 +8,7 @@ const Form = () => {
       <div className="request_form">
          <h3>Got an idea? Let's build that!</h3>
          {/* ADD NETLIFY FORMS SUPPORT / VISIT DOCS FOR REF */}
-         <form name="contact" method="POST">
+         <form name="contact" method="POST" className="text-sm">
             <input type="hidden" name="form-name" value="contact" />
             {/* NETLIFY FORMS ANTI-SPAM */}
             <p className="hidden">
@@ -29,7 +29,7 @@ const Form = () => {
                   name="description"
                   placeholder="Project Description"
                   required
-                  style={{ resize: "none", fontSize: "0.8rem", height: "7em" }}
+                  style={{ resize: "none" }}
                />
             </div>
             <Button type="submit" color="secondary">

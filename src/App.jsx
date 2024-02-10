@@ -27,7 +27,6 @@ const HeaderCard = styled(Card)`
    top: 80px;
    z-index: 10;
    flex-basis: 30%;
-   height: 330px;
    width: 280px;
 
    @media (max-width: 800px) {
@@ -74,7 +73,7 @@ function App() {
 
    return (
       <IconContext.Provider value={iconGlobalStyles}>
-         <div className="app">
+         <div className="app font-poppins">
             <Navbar />
             <div className="header">
                <div
@@ -98,8 +97,10 @@ function App() {
 
             <AnimateJson animate={animation_1} />
 
-            <Skills />
-            <Projects projects={isProjectsLoading ? [] : projects} />
+            <div className="container">
+               <Skills />
+               <Projects projects={isProjectsLoading ? [] : projects} />
+            </div>
             <Footer />
          </div>
       </IconContext.Provider>

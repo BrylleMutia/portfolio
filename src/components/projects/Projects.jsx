@@ -1,5 +1,4 @@
 import React from "react";
-import "./Projects.css";
 
 import Project from "./project/Project";
 
@@ -14,19 +13,24 @@ const iconStyles = {
 const Projects = ({ projects }) => {
    return (
       <IconContext.Provider value={iconStyles}>
-         <section className="works flex_column" id="projects">
-            <h3 className="works__header">My Past Projects</h3>
-            <p style={{ color: "#333" }}>
+         <section
+            className="flex flex-col text-center items-center"
+            id="projects"
+         >
+            <h3 className="mt-[4em] mb-2 font-pacifico text-[3em] py-7 px-[2em]">
+               Projects
+            </h3>
+            <p className="mb-10">
                Github:{" "}
                <a
                   href="https://github.com/BrylleMutia"
                   target="_blank"
-                  style={{ color: "#4895ef" }}
+                  className="text-blue-500"
                >
                   https://github.com/BrylleMutia
                </a>
             </p>
-            <div className="container flex_row works__container">
+            <div className="container flex_row overflow-hidden text-white px-0">
                {projects.map((project, index) => (
                   <Project key={index} projectDetails={project} />
                ))}

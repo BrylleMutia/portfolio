@@ -1,5 +1,4 @@
 import React from "react";
-import "./Skills.css";
 
 import {
    FaCss3,
@@ -15,7 +14,14 @@ import { GrMysql } from "react-icons/gr";
 import { SiTailwindcss, SiTypescript, SiJavascript } from "react-icons/si";
 import { GrOracle } from "react-icons/gr";
 
-import { Card } from "../styled/Styled";
+import {
+   Card,
+   CardContent,
+   CardDescription,
+   CardFooter,
+   CardHeader,
+   CardTitle,
+} from "../ui/card";
 
 const Skills = () => {
    const skillsList = [
@@ -28,7 +34,7 @@ const Skills = () => {
          icon: <FaCss3 />,
       },
       {
-         name: "TailwindCSS",
+         name: "Tailwind",
          icon: <SiTailwindcss />,
       },
       {
@@ -78,22 +84,19 @@ const Skills = () => {
    ];
 
    return (
-      <section className="container flex_column skills" id="skills">
-         <h3>My Current Skills</h3>
-         <div className="flex_row">
+      <section className="flex flex-col items-center" id="skills">
+         <h3 className="my-10 font-pacifico text-[3em] py-7 px-[2em]">Skills</h3>
+         <div className="flex flex-wrap justify-center gap-4 max-w-[1000px]">
             {skillsList.map((tech, index) => (
-               <div key={index} className="skills__wrapper">
-                  <Card
-                     key={index}
-                     style={{
-                        boxShadow: "0 3px 5px rgba(0, 0, 0, 0.2)",
-                        textAlign: "center",
-                     }}
-                  >
-                     <h4>{tech.name}</h4>
+               <Card
+                  key={index}
+                  className="transition-all duration-200 hover:translate-y-[-10px]"
+               >
+                  <CardContent className="flex flex-col items-center justify-center p-4 gap-4">
+                     <h3>{tech.name}</h3>
                      <div>{tech.icon}</div>
-                  </Card>
-               </div>
+                  </CardContent>
+               </Card>
             ))}
          </div>
       </section>

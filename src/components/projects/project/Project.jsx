@@ -6,6 +6,13 @@ import { Card } from "../../styled/Styled";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BiLinkExternal } from "react-icons/bi";
+import {
+   Tooltip,
+   TooltipContent,
+   TooltipProvider,
+   TooltipTrigger,
+} from "../../ui/tooltip";
+import { Badge } from "../../ui/badge";
 
 // for background-image overlay
 const getImageForCard = (img) => `
@@ -76,19 +83,35 @@ export default function Project({ projectDetails }) {
          className={isVisible && "project__animate"}
          image={projectDetails.image}
       >
-         <div className="flex_row project__links">
-            {projectDetails.source && (
-               <a target="_blank" href={projectDetails.source}>
-                  <AiFillGithub />
-               </a>
-            )}
+         <TooltipProvider>
+            <div className="flex_row project__links">
+               {projectDetails.source && (
+                  <Tooltip>
+                     <TooltipTrigger className="mb-2">
+                        <a target="_blank" href={projectDetails.source}>
+                           <AiFillGithub />
+                        </a>
+                     </TooltipTrigger>
+                     <TooltipContent>
+                        <p>Github repo</p>
+                     </TooltipContent>
+                  </Tooltip>
+               )}
 
-            {projectDetails.link && (
-               <a target="_blank" href={projectDetails.link}>
-                  <BiLinkExternal />
-               </a>
-            )}
-         </div>
+               {projectDetails.link && (
+                  <Tooltip>
+                     <TooltipTrigger>
+                        <a target="_blank" href={projectDetails.link}>
+                           <BiLinkExternal />
+                        </a>
+                     </TooltipTrigger>
+                     <TooltipContent>
+                        <p>Live demo</p>
+                     </TooltipContent>
+                  </Tooltip>
+               )}
+            </div>
+         </TooltipProvider>
          <div
             className="project__title"
             style={{
@@ -97,7 +120,13 @@ export default function Project({ projectDetails }) {
             }}
          >
             <h3>{projectDetails.title}</h3>
-            <p>{projectDetails.description}</p>
+            <p className="mb-2">{projectDetails.description}</p>
+
+            <div className="flex flex-wrap gap-2 justify-center">
+               {projectDetails.skill?.map((skillUsed) => (
+                  <Badge className="bg-blue-600">{skillUsed}</Badge>
+               ))}
+            </div>
          </div>
       </ProjectsCard>
    );
