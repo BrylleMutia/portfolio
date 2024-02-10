@@ -80,11 +80,17 @@ export default function Project({ projectDetails }) {
             <a target="_blank" href={projectDetails.source}>
                <AiFillGithub />
             </a>
-            <a target="_blank" href={projectDetails.link}>
-               <BiLinkExternal />
-            </a>
+
+            {projectDetails.link && (
+               <a target="_blank" href={projectDetails.link}>
+                  <BiLinkExternal />
+               </a>
+            )}
          </div>
-         <div className="project__title">
+         <div
+            className="project__title"
+            style={{ marginTop: !projectDetails.link && "2em" }}
+         >
             <h3>{projectDetails.title}</h3>
             <p>{projectDetails.description}</p>
          </div>
