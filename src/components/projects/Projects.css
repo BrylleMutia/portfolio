@@ -1,15 +1,19 @@
 .works {
-  margin-top: 5em;
-  color: #fff;
-  text-align: center;
+   margin-top: 5em;
+   color: #fff;
+   text-align: center;
 }
 
 .works__header {
-  font-size: 1.4rem;
-  color: var(--color-text);
+   font-size: 1.4rem;
+   color: var(--color-text);
+}
+
+.works__subheader {
+   color: "red";
 }
 
 .works__container {
-  overflow: hidden;
+   overflow: hidden;
 }
 /*# sourceMappingURL=Projects.module.css.map */
