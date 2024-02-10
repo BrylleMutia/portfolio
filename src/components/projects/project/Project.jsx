@@ -77,9 +77,11 @@ export default function Project({ projectDetails }) {
          image={projectDetails.image}
       >
          <div className="flex_row project__links">
-            <a target="_blank" href={projectDetails.source}>
-               <AiFillGithub />
-            </a>
+            {projectDetails.source && (
+               <a target="_blank" href={projectDetails.source}>
+                  <AiFillGithub />
+               </a>
+            )}
 
             {projectDetails.link && (
                <a target="_blank" href={projectDetails.link}>
@@ -89,7 +91,10 @@ export default function Project({ projectDetails }) {
          </div>
          <div
             className="project__title"
-            style={{ marginTop: !projectDetails.link && "2em" }}
+            style={{
+               marginTop:
+                  (!projectDetails.link || !projectDetails.source) && "2em",
+            }}
          >
             <h3>{projectDetails.title}</h3>
             <p>{projectDetails.description}</p>

@@ -68,7 +68,7 @@ const db = getFirestore(firebaseApp);
 function App() {
    // get projects list from firebase
    const projectsRef = collection(db, "projects");
-   const projectsQuery = query(projectsRef, orderBy("dateAdded", "asc"));
+   const projectsQuery = query(projectsRef, orderBy("dateAdded", "desc"));
    const [projects, isProjectsLoading] = useCollectionData(projectsQuery);
    console.log(projects, isProjectsLoading);
 
