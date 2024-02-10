@@ -54,7 +54,7 @@ const iconGlobalStyles = {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseApp = initializeApp({
-   apiKey: REACT_APP_FIREBASE_API_KEY,
+   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
    authDomain: "portfolio-abd3b.firebaseapp.com",
    projectId: "portfolio-abd3b",
    storageBucket: "portfolio-abd3b.appspot.com",
