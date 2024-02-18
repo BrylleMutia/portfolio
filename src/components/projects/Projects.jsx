@@ -17,7 +17,7 @@ const Projects = ({ projects }) => {
             className="flex flex-col text-center items-center"
             id="projects"
          >
-            <h3 className="mt-[4em] mb-2 font-pacifico text-[3em] py-7 px-[2em]">
+            <h3 className="mt-[2em] mb-2 font-pacifico text-[3em] py-7 px-[2em]">
                Projects
             </h3>
             <p className="mb-10">

@@ -85,7 +85,7 @@ const Skills = () => {
 
    return (
       <section className="flex flex-col items-center" id="skills">
-         <h3 className="my-10 font-pacifico text-[3em] py-7 px-[2em]">Skills</h3>
+         <h3 className="mb-10 mt-5 font-pacifico text-[3em] py-7 px-[2em]">Skills</h3>
          <div className="flex flex-wrap justify-center gap-4 max-w-[1000px]">
             {skillsList.map((tech, index) => (
                <Card
