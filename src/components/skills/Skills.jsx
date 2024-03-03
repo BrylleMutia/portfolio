@@ -4,10 +4,8 @@ import { FaCss3, FaHtml5, FaReact, FaPython, FaFlask } from "react-icons/fa";
 import { DiGit } from "react-icons/di";
 import { SiRedux, SiFirebase } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { SiTailwindcss, SiTypescript, SiJavascript } from "react-icons/si";
+import { SiTailwindcss, SiTypescript, SiJavascript, SiNextDotJs } from "react-icons/si";
 import { GrOracle } from "react-icons/gr";
-import { TbBrandNextjs } from "react-icons/tb";
-
 import { Card, CardContent } from "../ui/card";
 
 const Skills = () => {
@@ -38,7 +36,7 @@ const Skills = () => {
       },
       {
          name: "NextJS",
-         icon: <TbBrandNextjs />,
+         icon: <SiNextDotJs />,
       },
       {
          name: "Redux",
