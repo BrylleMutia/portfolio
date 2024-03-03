@@ -1,28 +1,14 @@
 import React from "react";
 
-import {
-   FaCss3,
-   FaHtml5,
-   FaReact,
-   FaVuejs,
-   FaPython,
-   FaFlask,
-} from "react-icons/fa";
-import { DiSass, DiGit } from "react-icons/di";
+import { FaCss3, FaHtml5, FaReact, FaPython, FaFlask } from "react-icons/fa";
+import { DiGit } from "react-icons/di";
 import { SiRedux, SiFirebase } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 import { SiTailwindcss, SiTypescript, SiJavascript } from "react-icons/si";
 import { GrOracle } from "react-icons/gr";
 import { TbBrandNextjs } from "react-icons/tb";
 
-import {
-   Card,
-   CardContent,
-   CardDescription,
-   CardFooter,
-   CardHeader,
-   CardTitle,
-} from "../ui/card";
+import { Card, CardContent } from "../ui/card";
 
 const Skills = () => {
    const skillsList = [
