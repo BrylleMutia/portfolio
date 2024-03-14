@@ -4,9 +4,16 @@ import { FaCss3, FaHtml5, FaReact, FaPython, FaFlask } from "react-icons/fa";
 import { DiGit } from "react-icons/di";
 import { SiRedux, SiFirebase } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
-import { SiTailwindcss, SiTypescript, SiJavascript, SiNextDotJs } from "react-icons/si";
+import {
+   SiTailwindcss,
+   SiTypescript,
+   SiJavascript,
+   SiNextDotJs,
+} from "react-icons/si";
 import { GrOracle } from "react-icons/gr";
 import { Card, CardContent } from "../ui/card";
+
+import HeaderIcon from "../../assets/header-icon.svg";
 
 const Skills = () => {
    const skillsList = [
@@ -70,8 +77,8 @@ const Skills = () => {
 
    return (
       <section className="flex flex-col items-center" id="skills">
-         <h3 className="mb-10 mt-5 font-pacifico text-[3em] py-7 px-[2em]">
-            Skills
+         <h3 className="mb-10 mt-5 font-poppins font-bold flex items-center text-[2.2em] py-7 px-[2em]">
+            <img src={HeaderIcon} alt="header-icon" className="mr-4" /> Skills
          </h3>
          <div className="flex flex-wrap justify-center gap-4 max-w-[1000px]">
             {skillsList.map((tech, index) => (

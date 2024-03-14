@@ -1,6 +1,7 @@
 import React from "react";
 
 import Project from "./project/Project";
+import HeaderIcon from "../../assets/header-icon.svg";
 
 import { IconContext } from "react-icons";
 
@@ -17,7 +18,8 @@ const Projects = ({ projects }) => {
             className="flex flex-col text-center items-center"
             id="projects"
          >
-            <h3 className="mt-[2em] mb-2 font-pacifico text-[3em] py-7 px-[2em]">
+            <h3 className="mt-[3em] font-poppins font-bold flex items-center text-[2.2em] py-7 px-[2em]">
+               <img src={HeaderIcon} alt="header-icon" className="mr-4" />{" "}
                Projects
             </h3>
             <p className="mb-10">
@@ -25,6 +27,7 @@ const Projects = ({ projects }) => {
                <a
                   href="https://github.com/BrylleMutia"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-blue-500"
                >
                   https://github.com/BrylleMutia
